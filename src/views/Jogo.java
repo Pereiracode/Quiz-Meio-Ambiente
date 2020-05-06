@@ -12,10 +12,9 @@ public class Jogo extends javax.swing.JFrame {
     Data dados = new Data();
     Random random = new Random();
     int aux = 0;
-    int pontos;
-    int vidas;
     String[] selecionadaResposta;
     Pergunta[] selecionadaPergunta;
+    int acertos, erros, pontos, vidas;
     
     public Jogo() {
         initComponents();
@@ -144,10 +143,12 @@ public class Jogo extends javax.swing.JFrame {
         if(b.getText().equals(selecionadaPergunta[NumeroQuestao() - 1].RespostaCerta)){
             JOptionPane.showMessageDialog(this, "Resposta Correta !");
             AdicionarPontuacao();
+            acertos++;
         }
         else{
             JOptionPane.showMessageDialog(this, "Resposta Errada !");
             RemoverPontuacao();
+            erros++;
         }
         
         if(!lblPergunta.getText().equals(selecionadaPergunta[6].Questao)){
@@ -155,10 +156,12 @@ public class Jogo extends javax.swing.JFrame {
         }
         else{
             if(lblNivel.getText().equals("Hard")){
-                JOptionPane.showMessageDialog(this, "Fim de jogo\nTela de resultados !");
-                Resultados r = new Resultados();
+                JOptionPane.showMessageDialog(this, "Parabéns !");
+                pontos = Integer.parseInt(lblPontuacao.getText());
+                Resultados r = new Resultados(acertos, erros, Integer.parseInt(lblPontuacao.getText()));
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
+                r.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE); // Janelas independentes
                 this.dispose(); // fecha a tela de jogo !
                 // Fim de jogo
                 // Redirecionar para uma tela com os resultados
