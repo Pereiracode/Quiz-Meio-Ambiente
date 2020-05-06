@@ -1,6 +1,7 @@
 package views;
 
 import data.Data;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import java.util.Random;
 import javax.swing.JButton;
@@ -8,6 +9,7 @@ import models.Pergunta;
 
 
 public class Jogo extends javax.swing.JFrame {    
+    
     
     Data dados = new Data();
     Random random = new Random();
@@ -93,7 +95,7 @@ public class Jogo extends javax.swing.JFrame {
         if(pontos >= 20){
             lblPontuacao.setText(Integer.toString(pontos - 20));
         }
-        vidas = Integer.parseInt(lblVidas.getText());
+        vidas = Integer.parseInt(lblVidas.getText()); 
         if(vidas == 1){
             lblVidas.setText("0");
             JOptionPane.showMessageDialog(this, "Fim de jogo, Tente novamente !");
@@ -114,6 +116,7 @@ public class Jogo extends javax.swing.JFrame {
         SetarPergunta();
         MisturaResposta();
         lblVidas.setText("3");
+        this.getContentPane().setBackground(new Color(50,205,50));
     }
     
     
@@ -131,9 +134,11 @@ public class Jogo extends javax.swing.JFrame {
     public void MudarFase(){
         if(lblNivel.getText().equals("Easy")){
             lblNivel.setText("Medium");
+            this.getContentPane().setBackground(new Color(255,215,0));
         }
         else{
             lblNivel.setText("Hard");
+            this.getContentPane().setBackground(new Color(255,69,0));
         }
         aux = 0;
         lblVidas.setText("3");
