@@ -4,12 +4,14 @@ import data.Data;
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import java.util.Random;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import models.Pergunta;
 
 
 public class Jogo extends javax.swing.JFrame {    
     
+   
     
     Data dados = new Data();
     Random random = new Random();
@@ -21,6 +23,7 @@ public class Jogo extends javax.swing.JFrame {
     public Jogo() {
         initComponents();
         CarregarInicial();
+        
     }
     
 
@@ -117,6 +120,12 @@ public class Jogo extends javax.swing.JFrame {
         MisturaResposta();
         lblVidas.setText("3");
         this.getContentPane().setBackground(new Color(50,205,50));
+        ImageIcon icon = new ImageIcon("src/imagens/vidas.png");
+        icon.setImage(icon.getImage().getScaledInstance(lblVidas.getWidth(), lblVidas.getHeight(), 1));
+        lblVidas.setIcon(icon);
+        ImageIcon icon1 = new ImageIcon("src/imagens/pontos.png");
+        icon1.setImage(icon1.getImage().getScaledInstance(lblPontos.getWidth(), lblPontos.getHeight(), 1));
+        lblPontos.setIcon(icon1);
     }
     
     
@@ -204,14 +213,18 @@ public class Jogo extends javax.swing.JFrame {
         btnD = new javax.swing.JButton();
         btnA = new javax.swing.JButton();
         lblPontuacao = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        lblPontos = new javax.swing.JLabel();
         lblVidas = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        lblNivel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        lblNumeroPergunta.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         lblNumeroPergunta.setText("PERGUNTA X / 7");
 
-        lblNivel.setText("nivel");
+        lblNivel.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        lblNivel.setText("---");
 
         lblPergunta.setText("TEXTO DA PERGUNTA");
 
@@ -262,9 +275,10 @@ public class Jogo extends javax.swing.JFrame {
 
         lblPontuacao.setText("---");
 
-        jLabel1.setText("Pontuação:");
-
         lblVidas.setText("vidas");
+
+        lblNivel1.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
+        lblNivel1.setText("Nível:");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -272,41 +286,48 @@ public class Jogo extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addContainerGap()
+                            .addComponent(jpPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(lblVidas)
+                            .addGap(166, 166, 166)
+                            .addComponent(lblNumeroPergunta)
+                            .addGap(174, 174, 174)
+                            .addComponent(lblNivel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblNivel)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPontos, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lblPontuacao)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jpPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblVidas)
-                                .addGap(42, 42, 42)
-                                .addComponent(lblNivel)
-                                .addGap(89, 89, 89)
-                                .addComponent(lblNumeroPergunta)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lblPontuacao)
-                                .addGap(88, 88, 88))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(317, 317, 317)
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(btnD)
                             .addComponent(btnC)
                             .addComponent(btnB)
                             .addComponent(btnA))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNumeroPergunta)
-                    .addComponent(lblNivel)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPontuacao)
-                    .addComponent(jLabel1)
-                    .addComponent(lblVidas))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(lblPontos, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(lblNumeroPergunta)
+                            .addComponent(lblNivel)
+                            .addComponent(lblVidas)
+                            .addComponent(lblNivel1))))
+                .addGap(18, 18, Short.MAX_VALUE)
                 .addComponent(jpPergunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnA)
@@ -316,7 +337,7 @@ public class Jogo extends javax.swing.JFrame {
                 .addComponent(btnC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btnD)
-                .addContainerGap(22, Short.MAX_VALUE))
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -375,11 +396,13 @@ public class Jogo extends javax.swing.JFrame {
     private javax.swing.JButton btnB;
     private javax.swing.JButton btnC;
     private javax.swing.JButton btnD;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jpPergunta;
     private javax.swing.JLabel lblNivel;
+    private javax.swing.JLabel lblNivel1;
     private javax.swing.JLabel lblNumeroPergunta;
     private javax.swing.JLabel lblPergunta;
+    private javax.swing.JLabel lblPontos;
     private javax.swing.JLabel lblPontuacao;
     private javax.swing.JLabel lblVidas;
     // End of variables declaration//GEN-END:variables
