@@ -134,7 +134,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblPergunta">
           <Properties>
-            <Property name="text" type="java.lang.String" value="TEXTO DA PERGUNTA"/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;"/>
           </Properties>
         </Component>
       </SubComponents>

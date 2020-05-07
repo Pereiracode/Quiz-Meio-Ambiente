@@ -25,7 +25,7 @@ public class Sobre extends javax.swing.JFrame {
         jLabel1.setText("SOBRE");
 
         jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel2.setText("<html>Jogo criado para apresentação e obtenção de nota na avaliação da disciplina Atividade Prática Supervisionada, apresentada no 3º Semestre do Curso Ciência da Computação.<br><br><br>Grupo:<br><br>Mateus Pereira - F03AJF9<br>Benjamin Benny - xxxx<br>Edson Luz - xxxx<br>Diogo Makotto - xxxx");
+        jLabel2.setText("<html>Jogo criado para apresentação e obtenção de nota na avaliação da disciplina Atividade Prática Supervisionada, apresentada no 3º Semestre do Curso Ciência da Computação.<br><br><br>Grupo:<br><br>Mateus Pereira - F03AJF9<br>Benjamin Benny - D991671<br>Edson Luz - N414GG0<br>Diogo Makotto - N502541");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

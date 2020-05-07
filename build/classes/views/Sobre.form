@@ -64,7 +64,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Arial" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="&lt;html&gt;Jogo criado para apresenta&#xe7;&#xe3;o e obten&#xe7;&#xe3;o de nota na avalia&#xe7;&#xe3;o da disciplina Atividade Pr&#xe1;tica Supervisionada, apresentada no 3&#xba; Semestre do Curso Ci&#xea;ncia da Computa&#xe7;&#xe3;o.&lt;br&gt;&lt;br&gt;&lt;br&gt;Grupo:&lt;br&gt;&lt;br&gt;Mateus Pereira - F03AJF9&lt;br&gt;Benjamin Benny - xxxx&lt;br&gt;Edson Luz - xxxx&lt;br&gt;Diogo Makotto - xxxx"/>
+        <Property name="text" type="java.lang.String" value="&lt;html&gt;Jogo criado para apresenta&#xe7;&#xe3;o e obten&#xe7;&#xe3;o de nota na avalia&#xe7;&#xe3;o da disciplina Atividade Pr&#xe1;tica Supervisionada, apresentada no 3&#xba; Semestre do Curso Ci&#xea;ncia da Computa&#xe7;&#xe3;o.&lt;br&gt;&lt;br&gt;&lt;br&gt;Grupo:&lt;br&gt;&lt;br&gt;Mateus Pereira - F03AJF9&lt;br&gt;Benjamin Benny - D991671&lt;br&gt;Edson Luz - N414GG0&lt;br&gt;Diogo Makotto - N502541"/>
       </Properties>
     </Component>
   </SubComponents>

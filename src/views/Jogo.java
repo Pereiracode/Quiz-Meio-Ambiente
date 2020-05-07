@@ -226,7 +226,7 @@ public class Jogo extends javax.swing.JFrame {
         lblNivel.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         lblNivel.setText("---");
 
-        lblPergunta.setText("TEXTO DA PERGUNTA");
+        lblPergunta.setText("<html>");
 
         javax.swing.GroupLayout jpPerguntaLayout = new javax.swing.GroupLayout(jpPergunta);
         jpPergunta.setLayout(jpPerguntaLayout);
