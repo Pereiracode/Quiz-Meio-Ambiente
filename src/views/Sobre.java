@@ -1,4 +1,3 @@
-
 package views;
 
 import java.awt.Color;
@@ -12,8 +11,6 @@ public class Sobre extends javax.swing.JFrame {
         setIcon();
         this.setTitle("BioQuest - Sobre");
     }
-
-    
     
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -75,8 +72,6 @@ public class Sobre extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Sobre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-   
-
    
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {

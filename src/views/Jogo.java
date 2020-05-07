@@ -9,10 +9,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import models.Pergunta;
 
-
 public class Jogo extends javax.swing.JFrame {    
-    
-   
     
     Data dados = new Data();
     Random random = new Random();
@@ -27,7 +24,6 @@ public class Jogo extends javax.swing.JFrame {
         setIcon();
         this.setTitle("BioQuest - Jogo");
     }
-    
 
     public void SetarFase(){
         if(lblNivel.getText().equals("Easy")){
@@ -44,7 +40,6 @@ public class Jogo extends javax.swing.JFrame {
         }
     }
     
-    
     public JButton[] ListaBotao(){
         JButton[] list = {btnA, btnB, btnC, btnD};    
         return list;
@@ -55,7 +50,6 @@ public class Jogo extends javax.swing.JFrame {
         int b = random.nextInt(4);    
         int c = random.nextInt(4);
         int d = random.nextInt(4);
-       
         
         // Obrigando os 4 numeros serem diferentes !
         while(a == b || a == c || a == d || b == c || b == d || c == d){
@@ -109,22 +103,26 @@ public class Jogo extends javax.swing.JFrame {
         else{
             vidas --;
             lblVidas.setText(Integer.toString(vidas));
-        }
-        
+        }        
     }
     
     public void CarregarInicial(){
         lblPontuacao.setText("0");
         lblNivel.setText("Easy");
+        
         SetarFase();
         lblPergunta.setText(selecionadaPergunta[0].Questao);
         SetarPergunta();
+        
         MisturaResposta();
+        
         lblVidas.setText("3");
         this.getContentPane().setBackground(new Color(50,205,50));
+        
         ImageIcon icon = new ImageIcon("src/imagens/vidas.png");
         icon.setImage(icon.getImage().getScaledInstance(lblVidas.getWidth(), lblVidas.getHeight(), 1));
         lblVidas.setIcon(icon);
+        
         ImageIcon icon1 = new ImageIcon("src/imagens/pontos.png");
         icon1.setImage(icon1.getImage().getScaledInstance(lblPontos.getWidth(), lblPontos.getHeight(), 1));
         lblPontos.setIcon(icon1);
@@ -178,9 +176,7 @@ public class Jogo extends javax.swing.JFrame {
                 r.setVisible(true);
                 r.setLocationRelativeTo(null);
                 r.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE); // Janelas independentes
-                this.dispose(); // fecha a tela de jogo !
-                // Fim de jogo
-                // Redirecionar para uma tela com os resultados
+                this.dispose();
             }
             else{
                 JOptionPane.showMessageDialog(this, "Fim de fase !");
@@ -191,17 +187,7 @@ public class Jogo extends javax.swing.JFrame {
                 MisturaResposta();
             }
         }
-        
-        
-        // Se resposta certa, abrir joptionpane dando ok,
-        // somar pontuação e ir pra próxima pergunta
-        // Se resposta errada abrir joptionpane dando erro,
-        // descontar pontuação e/ou retirar uma vida e ir pra próxima pergunta
     }
-   
-   /*
-    ESPAÇO PARA CODAR A VONTADE ! ! !
-    */ 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -396,6 +382,7 @@ public class Jogo extends javax.swing.JFrame {
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
     }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnA;
     private javax.swing.JButton btnB;

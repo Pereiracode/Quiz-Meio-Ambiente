@@ -4,8 +4,6 @@ public class Pergunta {
     
     public String Questao;
     
-    public String[] Respostas;
-    
     public String RespostaCerta;
 
     public String getQuestao() {
@@ -14,14 +12,6 @@ public class Pergunta {
 
     public void setQuestao(String Questao) {
         this.Questao = Questao;
-    }
-
-    public String[] getRespostas() {
-        return Respostas;
-    }
-
-    public void setRespostas(String [] Respostas) {
-        this.Respostas = Respostas;
     }
 
     public String getRespostaCerta() {
@@ -35,9 +25,8 @@ public class Pergunta {
     public Pergunta(){
     }
 
-    public Pergunta(String Questao, String[] Respostas, String RespostaCerta) {
+    public Pergunta(String Questao, String RespostaCerta) {
         this.Questao = Questao;
-        this.Respostas = Respostas;
         this.RespostaCerta = RespostaCerta;
     }  
 }

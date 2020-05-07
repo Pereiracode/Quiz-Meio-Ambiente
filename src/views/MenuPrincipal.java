@@ -1,13 +1,7 @@
 package views;
 
 import java.awt.Color;
-import java.awt.Image;
 import java.awt.Toolkit;
-import java.net.URL;
-import java.util.ArrayList;
-import javax.swing.ImageIcon;
-import static jdk.nashorn.internal.parser.TokenType.DO;
-import models.Pergunta;
 
 public class MenuPrincipal extends javax.swing.JFrame {
    
@@ -103,14 +97,14 @@ public class MenuPrincipal extends javax.swing.JFrame {
         Jogo j = new Jogo();
         j.setVisible(true);
         j.setLocationRelativeTo(null);
-        j.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE); // Janelas independentes
+        j.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Instrucoes i = new Instrucoes();
         i.setVisible(true);
         i.setLocationRelativeTo(null);
-        i.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE); // Janelas independentes
+        i.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btnSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSobreActionPerformed
@@ -137,8 +131,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MenuPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        
-
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
