@@ -1,6 +1,9 @@
 
 package views;
 
+import java.awt.Color;
+import java.awt.Toolkit;
+
 public class Resultados extends javax.swing.JFrame {
 
     public Resultados(int acertos, int erros, int pontos) {
@@ -8,6 +11,9 @@ public class Resultados extends javax.swing.JFrame {
         lblCertas.setText(Integer.toString(acertos));
         lblErradas.setText(Integer.toString(erros));
         lblPontuacao.setText(Integer.toString(pontos));
+        this.getContentPane().setBackground(new Color(50,205,50));
+        setIcon();
+        this.setTitle("BioQuest - Resultados");
     }
 
     public Resultados(){
@@ -27,18 +33,25 @@ public class Resultados extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         jLabel1.setText("RESULTADOS");
 
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel2.setText("Questões certas:");
 
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setText("Questões erradas:");
 
+        jLabel4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel4.setText("Pontuação:");
 
+        lblCertas.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblCertas.setText("_____");
 
+        lblErradas.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblErradas.setText("_____");
 
+        lblPontuacao.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         lblPontuacao.setText("_____");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -61,7 +74,7 @@ public class Resultados extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(110, 110, 110)
                         .addComponent(jLabel1)))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -80,7 +93,7 @@ public class Resultados extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(lblPontuacao))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(74, Short.MAX_VALUE))
         );
 
         pack();
@@ -112,6 +125,10 @@ public class Resultados extends javax.swing.JFrame {
                 new Resultados().setVisible(true);
             }
         });
+    }
+    
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

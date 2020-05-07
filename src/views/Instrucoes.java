@@ -1,12 +1,15 @@
 package views;
 
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class Instrucoes extends javax.swing.JFrame {
 
     public Instrucoes() {
         initComponents();
         this.getContentPane().setBackground(new Color(50,205,50));
+        setIcon();
+        this.setTitle("BioQuest - Instruções");
     }
 
     @SuppressWarnings("unchecked")
@@ -78,6 +81,11 @@ public class Instrucoes extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
+    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;

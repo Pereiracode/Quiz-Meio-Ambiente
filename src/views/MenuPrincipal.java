@@ -1,16 +1,21 @@
 package views;
 
 import java.awt.Color;
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.net.URL;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import static jdk.nashorn.internal.parser.TokenType.DO;
 import models.Pergunta;
 
 public class MenuPrincipal extends javax.swing.JFrame {
-
    
-    
     public MenuPrincipal() {
         initComponents();
         this.getContentPane().setBackground(new Color(50,205,50));
+        setIcon();
+        this.setTitle("BioQuest - Menu Principal");
     }
 
     @SuppressWarnings("unchecked")
@@ -91,7 +96,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        this.dispose();
+        System.exit(0);
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -150,4 +155,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
+    }
 }

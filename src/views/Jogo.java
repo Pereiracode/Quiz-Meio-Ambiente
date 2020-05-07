@@ -2,6 +2,7 @@ package views;
 
 import data.Data;
 import java.awt.Color;
+import java.awt.Toolkit;
 import javax.swing.JOptionPane;
 import java.util.Random;
 import javax.swing.ImageIcon;
@@ -23,7 +24,8 @@ public class Jogo extends javax.swing.JFrame {
     public Jogo() {
         initComponents();
         CarregarInicial();
-        
+        setIcon();
+        this.setTitle("BioQuest - Jogo");
     }
     
 
@@ -391,6 +393,9 @@ public class Jogo extends javax.swing.JFrame {
         });
     }
 
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnA;
     private javax.swing.JButton btnB;

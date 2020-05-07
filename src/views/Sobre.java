@@ -2,12 +2,15 @@
 package views;
 
 import java.awt.Color;
+import java.awt.Toolkit;
 
 public class Sobre extends javax.swing.JFrame {
 
     public Sobre() {
         initComponents();
         this.getContentPane().setBackground(new Color(50,205,50));
+        setIcon();
+        this.setTitle("BioQuest - Sobre");
     }
 
     
@@ -80,6 +83,10 @@ public class Sobre extends javax.swing.JFrame {
                 new Sobre().setVisible(true);
             }
         });
+    }
+    
+    private void setIcon() {
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../imagens/logoaps.png")));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
