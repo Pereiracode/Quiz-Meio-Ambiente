@@ -214,8 +214,6 @@ public class Jogo extends javax.swing.JFrame {
         lblNivel.setFont(new java.awt.Font("Arial", 1, 16)); // NOI18N
         lblNivel.setText("---");
 
-        lblPergunta.setText("<html>");
-
         javax.swing.GroupLayout jpPerguntaLayout = new javax.swing.GroupLayout(jpPergunta);
         jpPergunta.setLayout(jpPerguntaLayout);
         jpPerguntaLayout.setHorizontalGroup(
@@ -234,6 +232,7 @@ public class Jogo extends javax.swing.JFrame {
         );
 
         btnB.setText("B - RESPOSTA2");
+        btnB.setFocusPainted(false);
         btnB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBActionPerformed(evt);
@@ -241,6 +240,7 @@ public class Jogo extends javax.swing.JFrame {
         });
 
         btnC.setText("C - RESPOSTA3");
+        btnC.setFocusPainted(false);
         btnC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCActionPerformed(evt);
@@ -248,6 +248,7 @@ public class Jogo extends javax.swing.JFrame {
         });
 
         btnD.setText("D - RESPOSTA4");
+        btnD.setFocusPainted(false);
         btnD.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDActionPerformed(evt);
@@ -255,6 +256,7 @@ public class Jogo extends javax.swing.JFrame {
         });
 
         btnA.setText("A - RESPOSTA1");
+        btnA.setFocusPainted(false);
         btnA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAActionPerformed(evt);
@@ -295,11 +297,11 @@ public class Jogo extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnD)
-                            .addComponent(btnC)
-                            .addComponent(btnB)
-                            .addComponent(btnA))))
-                .addGap(22, 22, 22))
+                            .addComponent(btnD, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnA, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
